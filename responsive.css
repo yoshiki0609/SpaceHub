@@ -1,0 +1,110 @@
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header .container {
+    display: block;
+    text-align: center;
+    width: 90%;
+  }
+
+  .header-left {
+    margin-bottom: 20px;
+  }
+
+  .top-text h2 {
+    font-size: 50px;
+  }
+
+  .top-text p {
+    font-size: 12px;
+    margin: 30px 0;
+    letter-spacing: 4px;
+  }
+
+  .about-text {
+    width: 80%;
+  }
+
+  .membership-section .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .header .container {
+    display: block;
+    text-align: center;
+    width: 90%;
+  }
+
+  .header-left {
+    margin-bottom: 10px;
+  }
+
+  .header-menu ul li:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .header-menu ul li a {
+    font-size: 0.6em;
+  }
+
+  .top-text {
+    width: 80%;
+  }
+
+  .top-text h2 {
+    font-size: 40px;
+  }
+
+  .top-text p {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .about-text {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .space-section ul {
+    display: block;
+  }
+
+  .space-section ul li {
+    width: 100%;
+    position: relative;
+  }
+
+  .membership-section ul {
+    display: block;
+  }
+
+  .membership-section ul li {
+    width: 100%;
+  }
+
+  .membership-section ul li i {
+    margin-right: 30px;
+  }
+
+  .contact-section form {
+    width: 90%;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 0.6em;
+  }
+
+  .footer .container {
+    display: block;
+  }
+
+  .footer-item {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}

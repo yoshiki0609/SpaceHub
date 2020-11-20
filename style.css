@@ -1,0 +1,377 @@
+@charset "utf-8";
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'HG正楷書体-PRO';
+  color: #333;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in;
+}
+
+.header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu ul li:not(:last-child) {
+  margin-right: 26px;
+}
+
+.header-menu ul li:last-child a {
+  color: turquoise;
+}
+
+.header-menu ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu ul li a:hover {
+  opacity: 0.8;
+}
+
+.header-menu ul li i {
+  font-size: 1.4em;
+  padding-right: 6px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.header span {
+  display: inline-block;
+  color: rgb(88, 255, 238);
+}
+
+.items {
+  transform: translateY(40px);
+  transition: 0.8s ease-in-out;
+  opacity: 0;
+}
+
+.titles {
+  transform: translateX(-40px);
+  transition: 0.8s ease-in-out;
+  opacity: 0;
+}
+
+.right-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.up-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.top-section {
+  height: 100vh;
+  background-image: url(images/top.webp);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.top-section::before {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.top-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.top-text h2 {
+  font-weight: bold;
+  font-size: 80px;
+}
+
+.top-text p {
+  font-size: 20px;
+  margin: 30px 0;
+  letter-spacing: 6px;
+}
+
+.top-text a {
+  font-weight: bold;
+  padding: 10px 30px;
+  border-style: none;
+  background-color: turquoise;
+  color: #fff;
+}
+
+.top-text a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.about-section {
+  background-image: url(images/about.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 120vh;
+  position: relative;
+}
+
+.about-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  background-color: #fff;
+  width: 40%;
+  padding: 60px 40px;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.text {
+  line-height: 1.4em;
+  text-align: center;
+}
+
+.community-section {
+  height: auto;
+}
+
+.community-section .container,
+.space-section .container,
+.membership-section .container {
+  padding: 80px 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+}
+
+.space-section {
+  background-color: turquoise;
+  color: #fff;
+}
+
+.space-section ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.space-section ul li {
+  width: 50%;
+  position: relative;
+}
+
+.space-section ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+/* .space-section ul li a::before,
+.space-section ul li a::after {
+  transition: 0.3s ease;
+  ホバー時にゆっくりトランジションする設定
+} */
+
+@media screen and (min-width: 769px) {
+  .space-section ul li:nth-child(1) a:hover::before {
+    content: 'OPEN SPACE';
+    font-size: 34px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2;
+  }
+
+  .space-section ul li:nth-child(2):hover::before {
+    content: 'PRIVATE OFFICE';
+    font-size: 34px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2;
+  }
+
+  .space-section ul li:nth-child(3) a:hover::before {
+    content: 'EVENTS';
+    font-size: 34px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2;
+  }
+
+  .space-section ul li:nth-child(4) a:hover::before {
+    content: 'MEETING ROOM';
+    font-size: 34px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2;
+  }
+
+  .space-section ul li a:hover::after {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.membership-section ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.membership-section ul li {
+  display: flex;
+  align-items: center;
+  width: 48%;
+  height: 60px;
+  margin-top: 30px;
+  line-height: 1.4em;
+}
+
+.membership-section ul li i {
+  margin-right: 30px;
+}
+
+.contact-section {
+  background: url(images/contact.webp);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  position: relative;
+}
+
+.contact-section .container {
+  position: sticky;
+  padding: 80px 0;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.contact-section .text a:hover {
+  opacity: 0.8;
+}
+
+.contact-section form {
+  text-align: center;
+  width: 60%;
+  margin: 60px auto 0;
+}
+
+.contact-section form input,
+.contact-section form a {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.contact-section form input {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid skyblue;
+}
+
+.contact-section form a {
+  font-weight: bold;
+  border-style: none;
+  background-color: turquoise;
+  color: #fff;
+}
+
+.contact-section form a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.footer {
+  padding: 30px 0;
+  color: #fff;
+  font-size: 0.8em;
+  background-color: rgb(41, 41, 41);
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer a:hover {
+  opacity: 0.8;
+}
+
+.footer-item a:not(:last-child) {
+  margin-right: 10px;
+}
